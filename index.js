@@ -98,8 +98,6 @@ console.log(combineTwoArrays([1], [2, 3, 4, 5, 6]) )
 
 //9 Escriba una función llamada onlyUniques que acepte cualquier número de argumentos y devuelva un array de elementos únicos, sin repetidos.
 
-
-
 function onlyUniques(...argumentos){
     return [...new Set(argumentos)];
 };
@@ -132,19 +130,12 @@ console.log(combineAllArrays([1], [2, 3, 4, 5, 6]) )
 
 //11 Escriba una función llamada sumAndSquare que reciba cualquier número de argumentos, los eleve al cuadrado y devuelva la suma de todos los valores cuadrados.
 
-function sumAndSquare(...argumentos){
-    let total = 0
-    for(let i=0; i<argumentos.length; i++){
-    total += argumentos**argumentos
-    }
-}
-
-
 function sumAndSquare (...argumentos){
     let resultado =[]
     for(let i=0; i<argumentos.length; i++){
-     resultado = [...resultado, ...argumentos[i]]
+     resultado = [...resultado, argumentos[i]**2]
     }
-    return resultado.reduce((a, b) => a+ b)
+    return resultado.reduce((a, b)=> a+b)
  } 
-//ahora kahoot
+
+ console.log(sumAndSquare(1, 1, 2, 2, 3, 6, 7, 8))
